@@ -9,13 +9,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body> 
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <%= render "layouts/nav"%>
-    <p>Welcome! </p>
+    <div class="container is-fluid">
+    <section class="hero has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <% if user_signed_in?%>
+            <p class="is-size-5">
+                Welcome, <%= current_user.email %>! | <%= link_to "Logout", destroy_user_session_path, method: "delete", class: 'button is-warning' %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </section>
     <%= yield %>
-    
+    </div>
     <%= render "layouts/foot"%>
   </body>
 </html>
