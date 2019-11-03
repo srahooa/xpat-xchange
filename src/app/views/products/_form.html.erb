@@ -1,0 +1,28 @@
+
+
+<%= form_with model: @product, local: true do |f| %>
+<%# <%= form.select :genre, options_for_select(["Please select...", "Memoir", "Fantasy", "Romance"])%>
+<div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+</div>
+<div>
+    <%= f.label :pub_year %>
+    <%= f.text_field :pub_year %>
+</div>
+<div>
+    <%= f.label :price %>
+    <%= f.number_field :price, step: :any %>
+</div>
+<div>
+    <%= f.label :author %>
+    <%#
+    colection_select(model, foreign_key, foreign collection, primary key, label)
+    %>
+    <%= collection_select(:book, :author_id, Author.all, :id, :full_name) %>
+</div>
+<div>
+    <%= f.submit %>
+</div>
+
+<% end %>
