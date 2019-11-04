@@ -1,9 +1,9 @@
-<h1>Shop</h1>
+<h1 class="title">Shop</h1>
 
 <ul>
     <% @products.each do |product| %>
         <li>
-            <h2><%= link_to product.product_name.capitalize, products_path(product) %></h2>
+            <h2><%= link_to product.product_name.capitalize, product_path(product) %></h2>
             <h4><%= product.current_country.capitalize %></h4>
             <h2>Price: <%= number_to_currency product.price %> AUD</h2>
         </li>
