@@ -1,28 +1,30 @@
 
-
 <%= form_with model: @product, local: true do |f| %>
-<%# <%= form.select :genre, options_for_select(["Please select...", "Memoir", "Fantasy", "Romance"])%>
-<div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-</div>
-<div>
-    <%= f.label :pub_year %>
-    <%= f.text_field :pub_year %>
-</div>
-<div>
-    <%= f.label :price %>
-    <%= f.number_field :price, step: :any %>
-</div>
-<div>
-    <%= f.label :author %>
-    <%#
-    colection_select(model, foreign_key, foreign collection, primary key, label)
-    %>
-    <%= collection_select(:book, :author_id, Author.all, :id, :full_name) %>
-</div>
-<div>
-    <%= f.submit %>
-</div>
-
+    <div>
+        <%= f.label :product_name %>  <%= f.text_field :product_name %>
+    </div>
+    <div>
+        <%= f.label :origin_country %>  <%= f.text_field :origin_country %>
+    </div>
+    <div>
+        <%= f.label :voltage %>  <%= f.select :voltage, options_for_select(['100 V', '110 V', '115 V', '120 V', '127 V', '220 V', '230 V', '240 V', ]) %>
+    </div>
+    <div>
+        <%= f.label :plug_type %> <%= f.select :plug_type, options_for_select(['A', 'B', 'C', 'D', 'E' , 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']) %>
+    </div>
+    <div>
+        <%= f.label :condition %> <%= f.text_field :condition %>
+    </div>
+    <div>
+        <%= f.label :current_country %> <%= f.text_field :current_country %>
+    </div>
+    <div>
+        <%= f.label :current_city %> <%= f.text_field :current_city %>
+    </div>
+    <div>
+        <%= f.label :price %> <%= f.text_field :price %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
 <% end %>

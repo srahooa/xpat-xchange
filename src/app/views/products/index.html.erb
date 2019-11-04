@@ -3,9 +3,9 @@
 <ul>
     <% @products.each do |product| %>
         <li>
-            <h2><%= product.product_name.capitalize %></h2>
+            <h2><%= link_to product.product_name.capitalize, products_path(product) %></h2>
             <h4><%= product.current_country.capitalize %></h4>
-            <h2><%= product.price %></h2>
+            <h2>Price: <%= number_to_currency product.price %> AUD</h2>
         </li>
     <% end %>    
 </ul>

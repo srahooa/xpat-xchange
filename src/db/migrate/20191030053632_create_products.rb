@@ -9,7 +9,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :condition
       t.string :current_country
       t.string :current_city
-      t.decimal :price
+      t.decimal :price, :decimal, precision: 8, scale: 2
 
       t.timestamps
     end
