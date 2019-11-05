@@ -8,11 +8,11 @@
     <tbody>
         <% @products.each do |product| %>
             <tr>
-                    <td>
-                            <figure class="image is-square">
-                                <%= product.image.attached? ? image_tag(product.image, class: 'is-rounded') : " " %>
-                            </figure>
-                        </td>
+                <td>
+                    <figure>
+                        <%= product.image.attached? ? image_tag(product.image, width: 250) : " " %>
+                    </figure>
+                </td>
                 
                 <td><strong><%= link_to product.product_name.capitalize, product_path(product) %> </strong></td>
                
