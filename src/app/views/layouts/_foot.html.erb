@@ -2,13 +2,15 @@
   <div class="content has-text-centered">
     <p>
       <strong>X-PAT |X-CHANGE</strong> by <a href="https://github.com/srahooa/xpat-xchange">Sarah Aldrich</a>. 
-      <br>
-      <p class="level-item text-is-centered">
-        <a class="link is-info"><%= link_to "Sign Up", user_registration_path, method: "update"  %></a>
-        <a class="link is-info"> <%= link_to "Sign In", user_session_path, method: "create"  %></a>
-        <a class="link is-info"> <%= link_to "Shop", products_path%></a>
-        <a class="link is-info"> <%= link_to "Contact", pages_contact_path%></a>
-      </p>
+    </p>
+    <p>  
+      <div class="columns is-centered">
+        <a class="column link is-info"><%= link_to "Sign Up", user_registration_path, method: "update"  %></a>
+        <a class="column link is-info"> <%= link_to "Sign In", user_session_path, method: "create"  %></a>
+        <a class="column link is-info"> <%= link_to "Shop", products_path%></a>
+        <a class="column link is-info"> <%= link_to "About", pages_about_path%></a>
+        <a class="column link is-info"> <%= link_to "Contact", pages_contact_path%></a>
+      </div>
     </p>
   </div>
 </footer>
