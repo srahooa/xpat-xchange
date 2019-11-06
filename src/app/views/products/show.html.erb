@@ -10,5 +10,9 @@
 <h4> Current Country: <%= @product.current_country %> </h4>
 <h4> Current City: <%= @product.current_city %> </h4>
 <h4> Price: <%= number_to_currency @product.price %> </h4>
+<div data-turbolinks="false">
+    <%= link_to "Buy Now", new_order_path(@product) %>
+</div>
 <br>
+
 <a class="link is-info is-size-5"> <%= link_to "Shop", products_path%>
