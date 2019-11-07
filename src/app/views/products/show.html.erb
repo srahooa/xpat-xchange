@@ -3,16 +3,18 @@
 <figure class="image is-square">
     <%= @product.image.attached? ? image_tag(@product.image, height: 40) : " " %>
 </figure>
-<h4> Country of origin: <%= @product.origin_country %> </h4>
-<h4> Voltage: <%= @product.voltage %> </h4>
-<h4> Plug type: <%= @product.plug_type %> </h4>
-<h4> Condition: <%= @product.condition %> </h4>
-<h4> Current Country: <%= @product.current_country %> </h4>
-<h4> Current City: <%= @product.current_city %> </h4>
-<h4> Price: <%= number_to_currency @product.price %> </h4>
+<h4> <strong>Country of origin: </strong><%= @product.origin_country %> </h4>
+<h4> <strong>Voltage: </strong><%= @product.voltage %> </h4>
+<h4> <strong>Plug type: </strong><%= @product.plug_type %> </h4>
+<h4> <strong>Condition: </strong><%= @product.condition %> </h4>
+<h4> <strong>Current Country: </strong><%= @product.current_country %> </h4>
+<h4> <strong>Current City: </strong><%= @product.current_city %> </h4>
+<h4> <strong>Price: </strong><%= number_to_currency @product.price %> </h4>
+
 <div data-turbolinks="false">
-    <%= link_to "Buy Now", new_order_path(@product) %>
+    <%= link_to "Buy Now", new_order_path(@product), class: 'button is-small is-rounded is-info' %>
 </div>
+
 <br>
 
-<a class="link is-info is-size-5"> <%= link_to "Shop", products_path%>
+<a class="link is-info is-size-5"> <%= link_to "Return to Shop", products_path, class: 'button is-small is-rounded is-info is-outlined'%>

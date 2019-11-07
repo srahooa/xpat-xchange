@@ -24,7 +24,6 @@ class OrdersController < ApplicationController
         quantity: 1  
       }],
       success_url: "#{root_url}/orders/complete",
-      # success_url: "#{env[PORT] ? 'https://heroku-site' : 'http://localhost:300'}/orders/complete",
       cancel_url: "#{root_url}/orders/cancel",
     )
   end

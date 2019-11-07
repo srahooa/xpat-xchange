@@ -17,6 +17,10 @@
     </tbody>
 </table>
 
+<figure class="image is-square">
+    <%= @product.image.attached? ? image_tag(@product.image, width: 40) : " " %>
+</figure>
+
 <button id="checkout">Checkout Now</button>
 <script src="https://js.stripe.com/v3/"></script>
 <script>

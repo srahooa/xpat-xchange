@@ -29,6 +29,10 @@ class ProductsController < ApplicationController
     # @product = Product.find(params[:id])
   end
 
+  # def can_edit?(user)
+  #   return user == self.user || user.has_role?(:admin)
+  # end
+
   def show
     # @product = Product.find(params[:id]) 
   end

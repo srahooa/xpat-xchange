@@ -5,9 +5,7 @@ class Product < ApplicationRecord
   validates :product_name, presence: true
   validates :price, presence: true, numericality: true 
 
-  def can_edit?(user)
-    return user == self.user || user.has_role?(:admin)
-  end
+ 
 
 
 end

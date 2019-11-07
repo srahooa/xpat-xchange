@@ -10,9 +10,10 @@
   </head>
 
   <body> 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
     <%= render "layouts/nav"%>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
     <div class="container is-fluid">
     <section class="hero has-text-centered">
       <div class="hero-body">
@@ -27,6 +28,6 @@
     </section>
     <%= yield %>
     </div>
-    <%= render "layouts/foot"%>
   </body>
+  <%= render "layouts/foot"%>
 </html>

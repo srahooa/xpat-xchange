@@ -37,5 +37,5 @@ products = [
 
 Product.create(products)
 
-User.create(email: "admin@admin.com", password: "adminadmin")
-User.create(email: "foo@bar.com", password: "foobar")
+User.create(email: "admin@admin.com", password: "adminadmin", password_confirmation: "adminadmin")
+User.create(email: "foo@bar.com", password: "foobar", password_confirmation: "foobar")
