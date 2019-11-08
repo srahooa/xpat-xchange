@@ -1,7 +1,7 @@
 <h1 class="title"> <%= @product.product_name %> </h1>
 
-<figure class="image is-square">
-    <%= @product.image.attached? ? image_tag(@product.image, height: 40) : " " %>
+<figure >
+    <%= @product.image.attached? ? image_tag(@product.image, class: "image is-square") : " " %>
 </figure>
 <h4> <strong>Country of origin: </strong><%= @product.origin_country %> </h4>
 <h4> <strong>Voltage: </strong><%= @product.voltage %> </h4>

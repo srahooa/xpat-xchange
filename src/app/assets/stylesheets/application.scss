@@ -1,9 +1,25 @@
-// #footer {
-//     position: fixed;
-//     bottom: 0;
-//     height: 2rem;
-// }
 
  @import 'bulma';
 
+ footer {
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+ }
+
+
+ .footer {
+    padding: 2rem;
+}
+
+figure .image.is-square {
+    padding-top: 0;
+    max-width: 20%;
+}
+
+.center {
+    min-height: 100vh;
+    
+}
 

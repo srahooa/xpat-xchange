@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body> 
     <%= render "layouts/nav"%>
     <p class="notice"><%= notice %></p>
@@ -22,12 +22,19 @@
             <p class="is-size-5">
                 Welcome, <%= current_user.email %>! | <%= link_to "Logout", destroy_user_session_path, method: "delete", class: 'button is-warning' %>
             </p>
+            <br>
+            <div>
+              <%= link_to "Post an Item for Sale", new_product_path, class: 'button is-info' %>
+            </div>
           <% end %>
         </div>
       </div>
     </section>
+    <section class="center">
     <%= yield %>
+    </section>
     </div>
-  </body>
   <%= render "layouts/foot"%>
+  </body>
+  
 </html>

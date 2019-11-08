@@ -17,8 +17,8 @@
     </tbody>
 </table>
 
-<figure class="image is-square">
-    <%= @product.image.attached? ? image_tag(@product.image, width: 40) : " " %>
+<figure>
+    <%= @product.image.attached? ? image_tag(@product.image, class: "image is-square") : " " %>
 </figure>
 
 <button id="checkout">Checkout Now</button>

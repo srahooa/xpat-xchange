@@ -58,10 +58,10 @@ class ProductsController < ApplicationController
   end
 
   def authorise
-    return if @product.can_edit?(current_user)
-
-    flash[:alert] = "You are not authorised to perfrom that action!"
-    redirect_to products_path
+    # if current_user == @product.user
+    # flash[:alert] = "You are not authorised to perfrom that action!"
+    # redirect_to products_path
+    # end
   end
 
   def product_params
