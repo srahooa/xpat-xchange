@@ -1,13 +1,11 @@
-<h1 class="title">Shop</h1>
-
 <section>
-    <h2><strong>Appliances</strong></h2>     
+    <h1 class="title">Shop</h1>
     <div class="shop">
-    <div class="columns is-variable is-1-mobile is-2-tablet is-3-desktop is-multiline "> 
+    <div class="columns is-multiline "> 
         <% @products.each do |product| %>
-            <div class="column is-light">
+            <div id="shop" class="column">
                 <figure class="image">
-                    <%= product.image.attached? ? image_tag(product.image, class: "image is-square" ) : " " %>
+                    <%= product.image.attached? ? image_tag(product.image, class: "image is-square is-fullwidth" ) : " " %>
                 </figure>
 
                 <p><strong><%=  product.product_name.capitalize %> </strong></p>

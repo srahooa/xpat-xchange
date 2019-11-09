@@ -12,9 +12,8 @@ footer {
     padding: 2rem;
 }
 
-figure .image.is-square {
+figure .image.is-square.is-fullwidth {
     padding-top: 0;
-    max-width: 250px;
 }
 
 .center {
@@ -22,16 +21,15 @@ figure .image.is-square {
     padding-bottom: 150px;
     padding-left: 100px;
     padding-right: 100px;
-}
-
-.shop {
-    padding: 10px;
-    text-align: center;
-}
-
-.show {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+}
+
+#shop {
+    padding: 3.75rem;
+    flex-shrink: 0.2;
+    flex-grow: 0.2;
+
 }
