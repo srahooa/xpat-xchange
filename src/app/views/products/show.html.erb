@@ -1,20 +1,29 @@
-<h1 class="title"> <%= @product.product_name %> </h1>
+<section class="show ">
+    <div class="columns">
+        <div class="column is-full ">
+            <h1 class="title"> <%= @product.product_name %> </h1>
 
-<figure >
-    <%= @product.image.attached? ? image_tag(@product.image, class: "image is-square") : " " %>
-</figure>
-<h4> <strong>Country of origin: </strong><%= @product.origin_country %> </h4>
-<h4> <strong>Voltage: </strong><%= @product.voltage %> </h4>
-<h4> <strong>Plug type: </strong><%= @product.plug_type %> </h4>
-<h4> <strong>Condition: </strong><%= @product.condition %> </h4>
-<h4> <strong>Current Country: </strong><%= @product.current_country %> </h4>
-<h4> <strong>Current City: </strong><%= @product.current_city %> </h4>
-<h4> <strong>Price: </strong><%= number_to_currency @product.price %> </h4>
+            <figure >
+                <%= @product.image.attached? ? image_tag(@product.image, class: "image is-square") : " " %>
+            </figure>
+            
+            <h4> <strong>Country of origin: </strong><%= @product.origin_country %> </h4>
+            <h4> <strong>Voltage: </strong><%= @product.voltage %> </h4>
+            <h4> <strong>Plug type: </strong><%= @product.plug_type %> </h4>
+            <h4> <strong>Condition: </strong><%= @product.condition %> </h4>
+            <h4> <strong>Current Country: </strong><%= @product.current_country %> </h4>
+            <h4> <strong>Current City: </strong><%= @product.current_city %> </h4>
+            <h4> <strong>Price: </strong><%= number_to_currency @product.price %> </h4>
+            
+            <br>
+            
+            <div data-turbolinks="false">
+                <%= link_to "Buy Now", new_order_path(@product), class: 'button is-medium is-rounded is-info' %>
+            </div>
 
-<div data-turbolinks="false">
-    <%= link_to "Buy Now", new_order_path(@product), class: 'button is-small is-rounded is-info' %>
-</div>
+            <br>
 
-<br>
-
-<a class="link is-info is-size-5"> <%= link_to "Return to Shop", products_path, class: 'button is-small is-rounded is-info is-outlined'%>
+            <a class="link is-info is-size-5"> <%= link_to "Return to Shop", products_path, class: 'button is-small is-rounded is-info is-outlined'%>
+        </div>
+    </div>
+</section>

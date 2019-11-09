@@ -1,34 +1,27 @@
 <h1 class="title">Shop</h1>
 
-<table>
-    <thead>
-        <th>Appliances</th>    
-    </thead>
-
-    <tbody>
+<section>
+    <h2><strong>Appliances</strong></h2>     
+    <div class="shop">
+    <div class="columns is-variable is-1-mobile is-2-tablet is-3-desktop is-multiline "> 
         <% @products.each do |product| %>
-            <tr>
-                <td>
-                    <figure>
-                        <%= product.image.attached? ? image_tag(product.image, class: "image is-square" ) : " " %>
-                    </figure>
-                </td>
-                
-                <td><strong><%= link_to product.product_name.capitalize, product_path(product) %> </strong></td>
-               
-                <td> <strong>Current location: </strong><%= product.current_country.capitalize %></td>
-                <td> Price: <%= number_to_currency product.price %> AUD</td>
-                
-                <td><%= link_to 'Product Details', product, class: 'button is-primary is-outlined is-small is-rounded' %></td>
+            <div class="column is-light">
+                <figure class="image">
+                    <%= product.image.attached? ? image_tag(product.image, class: "image is-square" ) : " " %>
+                </figure>
+
+                <p><strong><%=  product.product_name.capitalize %> </strong></p>
+                <p> <strong>Current location: </strong><%= product.current_country.capitalize %></p>
+                <p> Price: <%= number_to_currency product.price %> AUD</p>
+                <p><%= link_to 'Product Details', product, class: 'button is-info is-outlined is-small is-rounded' %></p>
                 <% if user_signed_in? %>
-            
                     <% if (current_user == product.user) || (current_user.has_role? :admin) %>
-                        <td><%= link_to 'Edit', edit_product_path(product), class: 'button is-small is-outlined is-rounded is-warning' %></td>
-                        <td><%= link_to 'Destroy', product, method: :delete, class: 'button is-small is-outlined is-rounded is-warning', data: { confirm: 'Are you sure?' } %></td>
+                        <p><%= link_to 'Edit', edit_product_path(product), class: 'button is-small is-outlined is-rounded is-warning' %></p>
+                        <p><%= link_to 'Destroy', product, method: :delete, class: 'button is-small is-outlined is-rounded is-warning', data: { confirm: 'Are you sure?' } %></p>
                     <% end %>   
-                
-                <% end%>    
-            </tr>
+                <% end%>  
+            </div>  
         <% end %>
-    </tbody>
-</table>
+    </div>    
+    </div>
+</section>

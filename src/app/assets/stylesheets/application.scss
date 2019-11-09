@@ -1,26 +1,37 @@
 
  @import 'bulma';
 
- footer {
-    // position: fixed;
+footer {
     left:0;
     bottom: 0;
     width: 100%;
  }
 
 
- .footer {
+.footer {
     padding: 2rem;
 }
 
 figure .image.is-square {
     padding-top: 0;
-    max-width: 20%;
+    max-width: 250px;
 }
 
 .center {
     min-height: 50vh;
     padding-bottom: 150px;
-    
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
+.shop {
+    padding: 10px;
+    text-align: center;
+}
+
+.show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
