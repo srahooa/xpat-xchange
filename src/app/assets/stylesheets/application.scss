@@ -1,17 +1,19 @@
 
  @import 'bulma';
 
+
+// forcing the footer to the bottom of the page
 footer {
     left:0;
     bottom: 0;
     width: 100%;
  }
 
-
 .footer {
     padding: 2rem;
 }
 
+// Needed to override Bulma's padding for images
 figure .image.is-square {
     padding-top: 0;
 }
@@ -21,15 +23,31 @@ figure .image.is-square {
     padding-bottom: 150px;
     padding-left: 100px;
     padding-right: 100px;
+}
+
+// Styling the show page
+.show {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
 
+// index view of all products
 #shop {
     padding: 3.75rem;
     flex-shrink: 0.2;
     flex-grow: 0.2;
+}
 
+// layout for images of plugs
+#plugs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    // width: 100px;
+    p {
+        width: 100px;
+    }
 }
