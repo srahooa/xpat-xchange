@@ -126,6 +126,6 @@ To find inspiration for styling and layouts, I used Pintrest. I wanted to keep t
 
 By focusing on the planning, ERDs, and Wireframes before I started coding, I was able to solidify the big picture before delving into the details. From there I worked on building the required elements for the app. Each day I implemented a new feature, such as Devise, Rolify, or Cloudinary. While it is tempting to explore new APIs and implement various features, I tried to stay as true to scope to ensure I could accomplish and understand my application to the fullest. Aside from one initial style element to test on Heroku, all of the styling was completed at the end of the project.
 
-<img src="docs/moodboard-colours.png">
+![moodboard](docs/moodboard-colours.png)
 <img src="docs/wireframe-ideas.png">
 
