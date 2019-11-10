@@ -27,7 +27,7 @@ There will be buyers, sellers, and an admin for the site. Buyers will be interes
 
 For full user stories see [Trello](https://trello.com/b/GWwIQGbP/marketplace-app)
 
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/Trello_2.png">
+![Trello](docs/Trello_2.png)
 
 ## TECH STACK
 ----
@@ -64,11 +64,11 @@ For full user stories see [Trello](https://trello.com/b/GWwIQGbP/marketplace-app
 
 This two way marketplace connects **buyers** and **sellers** in the expat community. Any user can opt to sell an item on this website by signing up with an email and password set up using **Devise**. However, it is not necessary to log in if one is simply interested in buying. When selling, a user has the option to upload an image to their posting using **Cloudinary**. In addition to user authentication, X-Pat|X-Change also uses authorisation via **Rolify**. Through the creation of roles, the page admin has the ability to edit and destroy all posts. Using logic, sellers only have the option to edit or destroy their own items. At checkout payment is taken via **Stripe**. The checkout button redirects a user to Stripe and upon a successful transaction, the user is redirected back to the store page in hopes they want to buy more. This app is currently hosted live on **Heroku**.
 
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/screenshots/homepage.png">
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/screenshots/shop.png">
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/screenshots/login.png">
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/screenshots/show.png">
-<img src="https://github.com/srahooa/xpat-xchange/blob/master/docs/screenshots/about.png">
+![homepage](docs/screenshots/homepage.png)
+![shop](docs/screenshots/shop.png)
+![login](docs/screenshots/login.png)
+![details](docs/screenshots/show.png)
+![about](docs/screenshots/about.png)
 
 
 ## GROWTH
