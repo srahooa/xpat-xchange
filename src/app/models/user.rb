@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+# Devise creates a User and here a role is connected via Rolify
+# Products belong to User 
   rolify
   after_create :assign_default_role
 

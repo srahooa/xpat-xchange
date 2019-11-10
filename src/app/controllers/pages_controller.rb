@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  # a call for the static pages
+  
   def home
   end
 

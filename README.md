@@ -116,7 +116,7 @@ ____
 
 [Image in Docs folder](https://github.com/srahooa/xpat-xchange/blob/master/docs/X-pat_X-change%20ERD.png)
 
-##PROJECT MANAGEMENT
+## PROJECT MANAGEMENT
 -----
 >(R11 & R20)
 

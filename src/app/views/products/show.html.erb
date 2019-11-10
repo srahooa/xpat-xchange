@@ -1,8 +1,9 @@
+<!-- provides details of a selected product -->
 <section class="show ">
     <div class="columns">
         <div class="column is-full ">
             <h1 class="title"> <%= @product.product_name %> </h1>
-
+            <!-- displays image but does not require image -->
             <figure >
                 <%= @product.image.attached? ? image_tag(@product.image, class: "image is-square") : " " %>
             </figure>
@@ -16,6 +17,7 @@
             <h4> <strong>Price: </strong><%= number_to_currency @product.price %> </h4>
             
             <br>
+            <!-- authorisations for editing and deleting -->
             <% if user_signed_in? %>
                 <% if (current_user == @product.user) || (current_user.has_role? :admin) %>
                     <p>
@@ -25,6 +27,7 @@
                 <% end %>   
             <% end%>  
             <br>    
+            <!-- had to use to avoid having to refresh page to get to Stripe -->
             <div data-turbolinks="false">
                 <%= link_to "Buy Now", new_order_path(@product), class: 'button is-medium  is-info' %>
             </div>

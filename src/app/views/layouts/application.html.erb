@@ -10,15 +10,18 @@
   </head>
   
   <body> 
+    <!-- brings in partial -->
     <%= render "layouts/nav"%>
+    <!-- putting the notifications below the nav bar -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
+    <!-- "hero banner for account info" -->
     <div class="container is-fluid">
     <section class="hero has-text-centered">
       <div class="hero-body">
         <div class="container">
-          <% if user_signed_in?%>
+          <!-- only visible to those logged in -->
+          <% if user_signed_in?%>  
             <p class="is-size-5">
                 Welcome, <%= current_user.email %>! | <%= link_to "Logout", destroy_user_session_path, method: "delete", class: 'button is-warning' %>
             </p>
@@ -30,12 +33,13 @@
         </div>
       </div>
     </section>
-
+    <!-- place to render other html.erb files -->
     <section class="center">
     <%= yield %>
     </section>
     
     </div>
+  <!-- brings in partial -->
   <%= render "layouts/foot"%>
   </body>
   

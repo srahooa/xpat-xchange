@@ -1,16 +1,22 @@
 class ProductsController < ApplicationController
-  # before_action :authenticate_user! [ :create, :new, :update, :destroy]
+  # actions to be done before anyother methods- 
+  # set-product only for certain methods
+  # authorise a user for certain methods
+
   before_action :set_product, only: [:show, :edit, :update, :destroy] 
   before_action :authorise, only: [:edit, :update, :destroy]
 
+  # listing of all products
   def index
     @products = Product.all
   end
+
 
   def new
     @product = Product.new
   end
 
+  # creation and saving of a new product
   def create
     @product = Product.new(product_params)
     @product.user = current_user
@@ -26,23 +32,20 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    # @product = Product.find(params[:id])
   end
 
-  # def can_edit?(user)
-  #   return user == self.user || user.has_role?(:admin)
-  # end
 
   def show
-    # @product = Product.find(params[:id]) 
   end
 
+  # editing and saving
   def update
     @product.update(product_params)
     @product.image.attach(product_params[:image]) if product_params[:image]
     redirect_to product_path
   end
 
+  # deletion of a product
   def destroy
     @product.destroy
     respond_to do |format|
@@ -64,6 +67,7 @@ class ProductsController < ApplicationController
     # end
   end
 
+  # limits fields of data for a product. 
   def product_params
     params.require(:product).permit(:product_name, :origin_country, :voltage, :plug_type, :condition, :current_country, :current_city, :price, :image)
   end
