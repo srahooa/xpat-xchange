@@ -10,10 +10,10 @@
         <%= f.label :origin_country %>  <%= f.text_field :origin_country %>
     </div>
     <div>
-        <%= f.label :voltage %>  <%= f.select :voltage, options_for_select(['100 V', '110 V', '115 V', '120 V', '127 V', '220 V', '230 V', '240 V', ]) %>
+        <%= f.label :voltage %>  <%= f.select :voltage, options_for_select(['', '100 V', '110 V', '115 V', '120 V', '127 V', '220 V', '230 V', '240 V', ]) %>
     </div>
     <div>
-        <%= f.label :plug_type %> <%= f.select :plug_type, options_for_select(['A', 'B', 'C', 'D', 'E' , 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']) %>
+        <%= f.label :plug_type %> <%= f.select :plug_type, options_for_select(['','A', 'B', 'C', 'D', 'E' , 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']) %>
     </div>
     <div>
         <%= f.label :condition %> <%= f.text_field :condition %>

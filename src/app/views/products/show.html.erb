@@ -19,8 +19,8 @@
             <% if user_signed_in? %>
                 <% if (current_user == @product.user) || (current_user.has_role? :admin) %>
                     <p>
-                        <%= link_to 'Edit', edit_product_path(@product), class: 'button is-small is-rounded is-warning' %>
-                        <%= link_to 'Delete Item', @product, method: :delete, class: 'button is-small is-rounded is-warning', data: { confirm: 'Are you sure?' } %>
+                        <button class="button is-small is-rounded is-warning is-light"><%= link_to 'Edit', edit_product_path(@product)%></button>
+                        <button class="button is-small is-rounded is-warning is-light"><%= link_to 'Delete Item', @product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
                     </p>
                 <% end %>   
             <% end%>  

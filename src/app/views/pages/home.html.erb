@@ -8,6 +8,16 @@
     <p class="is-size-5">
         This is your one stop solution for all your foreign appliance woes. 
     </p>
+    <br>
+    <p class="is-size-6">
+        If you are interested in posting an item for sale, please create an account by following the 'sign up' button. Once you sign up and in, you can post an item for sale. Please note that a product title, location, and price are required fields.
+    </p>
+    <br>
+    <div class="columns">
+        <div class="column"><%= link_to 'Sign Up', new_user_registration_path, class: 'button is-large is-warning link' %></div>
+        <div class="column link"><%= link_to 'Sign In', new_user_session_path, class: 'button is-large is-warning' %></div>
+        <div class="column link"><%= link_to 'Shop', products_path, class: 'button is-large is-warning' %></div>
+    </div>
 </div>
 
 <%= render "plugs" %>
